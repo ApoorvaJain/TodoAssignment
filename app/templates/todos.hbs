@@ -1,0 +1,33 @@
+<section id="todoapp">
+	<header id="header">
+		<h1>todos</h1>
+	</header>
+	<section id="main">
+		<ul id="todo-list">
+			{{#each todo in filterResult}}
+			<li>
+				<button class="reWrite" {{action 'showModal' 'edit-modal' todo}}></button>
+				<span class="sNo">{{_view.contentIndex}}</span>
+				<label>{{todo.title}}</label><button class="destroy" {{action 'showModal' 'delete-modal' todo}}></button>
+				<span class="endBy">{{todo.dueDate}}</span>
+			</li>
+			{{/each}}
+		</ul>
+		<button class="add" {{action 'showModal' 'addNew-modal' model}}><span class="glyphicon glyphicon-plus"></span></button>
+	</section>
+
+	<footer id="footer">
+		<span id="todo-count">
+			<strong>{{remaining}}</strong> {{inflection}} left
+		</span>
+		
+		{{input type="text"
+			id="filters"
+			placeholder="Search todos"
+			value=searchQuery
+		}}
+		<button id="sort-by-date">
+		Sort by Date
+		</button>
+	</footer>
+</section>
