@@ -1,4 +1,4 @@
-import Ember from 'ember'
+import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	actions: {
@@ -9,10 +9,9 @@ export default Ember.Controller.extend({
 
       // Create the new Todo model
       var todo = this.store.createRecord('todo', {
-      	id: 5,
+      	id: 4,
         title: title,
-        isCompleted: false,
-        dueDate: '12-May-2015'
+        dueDate: '2015-06-14T18:30:00Z'
       });
 
       // Clear the "New Todo" text field

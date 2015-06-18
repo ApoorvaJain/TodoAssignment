@@ -22,7 +22,7 @@ export default Ember.ArrayController.extend({
   	},
   	searchQuery : null,
 
-  	filterResult: function(key,value){
+  	filterResult: function(){
     	var that = this;
     	if (this.searchQuery == undefined){
         	return this.get('content');}

@@ -9,15 +9,14 @@ export default Ember.Route.extend({
 	      this.render(name, {
 	        into: 'application',
 	        outlet: 'modal',
-	        path: '/xyz',
 	        model: model
 	      });
 	    },
 	    removeModal: function() {
-	    	this.disconnectOutlet({
-	    	outlet: 'modal',
-	    	parentView: 'application'
-	    	});
-		}
-  	}
+	      this.disconnectOutlet({
+	        outlet: 'modal',
+	        parentView: 'application'
+	      });
+	    }
+  }
 });

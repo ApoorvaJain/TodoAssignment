@@ -1,6 +1,6 @@
 html,
 body {
-	margin: auto;
+	margin: 0 auto !important;
 	padding: 0;
 }
 
@@ -22,10 +22,8 @@ button {
 
 button.add{
 	  position: absolute;
-	  top: 250px;
+	  top: -90px;
 	  left: 0px;
-	  right: 0px;
-	  margin: auto;
 	  width: 100px;
 	  height: 50px;
 	  font-size: 30px;
